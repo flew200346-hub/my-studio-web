@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const cards = document.querySelectorAll(".card, .big-emoji, .contact-box");
+  const cards = document.querySelectorAll(".card, .big-emoji, .contact-box, .stat, .step");
 
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
