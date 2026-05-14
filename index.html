@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>ATF.STUDIO</title>
 
@@ -33,7 +33,7 @@ body{
 
 nav{
     width:100%;
-    padding:24px 7%;
+    padding:22px 7%;
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -53,8 +53,8 @@ nav{
 }
 
 .logo img{
-    width:58px;
-    height:58px;
+    width:60px;
+    height:60px;
     object-fit:cover;
     border-radius:14px;
 }
@@ -65,12 +65,12 @@ nav{
 }
 
 .logo span{
-    color:#27c4ff;
+    color:#29c7ff;
 }
 
 nav ul{
     display:flex;
-    gap:38px;
+    gap:36px;
     list-style:none;
 }
 
@@ -78,12 +78,12 @@ nav a{
     color:white;
     text-decoration:none;
     font-size:18px;
+    font-weight:600;
     transition:.3s;
-    font-weight:500;
 }
 
 nav a:hover{
-    color:#27c4ff;
+    color:#29c7ff;
 }
 
 /* HERO */
@@ -91,10 +91,10 @@ nav a:hover{
 .hero{
     min-height:100vh;
     display:flex;
-    align-items:center;
     justify-content:space-between;
-    padding:140px 7% 80px;
-    gap:60px;
+    align-items:center;
+    padding:150px 7% 80px;
+    gap:70px;
 }
 
 .hero-text{
@@ -109,13 +109,13 @@ nav a:hover{
 }
 
 .hero-text span{
-    color:#27c4ff;
+    color:#29c7ff;
 }
 
 .hero-text p{
     font-size:26px;
     line-height:1.8;
-    color:#c7d9e5;
+    color:#d4e2ea;
     max-width:760px;
 }
 
@@ -135,8 +135,8 @@ nav a:hover{
 }
 
 .btn-primary{
-    background:#27c4ff;
-    color:#00111d;
+    background:#29c7ff;
+    color:#00131f;
     box-shadow:10px 10px 0 #000;
 }
 
@@ -145,13 +145,13 @@ nav a:hover{
 }
 
 .btn-outline{
-    border:2px solid #27c4ff;
-    color:#27c4ff;
+    border:2px solid #29c7ff;
+    color:#29c7ff;
 }
 
 .btn-outline:hover{
-    background:#27c4ff;
-    color:#00111d;
+    background:#29c7ff;
+    color:#00131f;
 }
 
 /* SLIDER */
@@ -163,8 +163,8 @@ nav a:hover{
     height:620px;
     border-radius:38px;
     overflow:hidden;
-    border:1px solid #1b5a79;
-    background:#021824;
+    background:#031724;
+    border:1px solid #1b5876;
     box-shadow:20px 20px 0 #000;
 }
 
@@ -180,15 +180,11 @@ nav a:hover{
     height:100%;
     object-fit:cover;
     opacity:0;
-    transition:opacity 1s ease, transform .5s ease;
+    transition:opacity 1s ease;
 }
 
 .slide.active{
     opacity:1;
-}
-
-.slide:hover{
-    transform:scale(1.03);
 }
 
 .prev,
@@ -196,13 +192,13 @@ nav a:hover{
     position:absolute;
     top:50%;
     transform:translateY(-50%);
-    width:56px;
-    height:56px;
+    width:58px;
+    height:58px;
     border:none;
     border-radius:50%;
-    background:rgba(0,0,0,.45);
+    background:rgba(0,0,0,.5);
     color:white;
-    font-size:24px;
+    font-size:26px;
     cursor:pointer;
     z-index:10;
     transition:.3s;
@@ -210,8 +206,8 @@ nav a:hover{
 
 .prev:hover,
 .next:hover{
-    background:#27c4ff;
-    color:#00111d;
+    background:#29c7ff;
+    color:#00131f;
 }
 
 .prev{
@@ -235,7 +231,7 @@ nav a:hover{
 }
 
 .section-title span{
-    color:#27c4ff;
+    color:#29c7ff;
 }
 
 /* PROJECT GRID */
@@ -252,12 +248,11 @@ nav a:hover{
     border-radius:28px;
     overflow:hidden;
     transition:.4s;
-    backdrop-filter:blur(8px);
 }
 
 .project-card:hover{
     transform:translateY(-12px);
-    box-shadow:0 0 40px rgba(39,196,255,.2);
+    box-shadow:0 0 40px rgba(41,199,255,.2);
 }
 
 .project-card img{
@@ -276,8 +271,8 @@ nav a:hover{
 }
 
 .project-info p{
-    color:#c6d8e4;
-    line-height:1.7;
+    color:#d6e3eb;
+    line-height:1.8;
 }
 
 /* ABOUT */
@@ -285,11 +280,11 @@ nav a:hover{
 .about-box{
     background:rgba(255,255,255,.04);
     border:1px solid rgba(255,255,255,.08);
-    border-radius:34px;
+    border-radius:32px;
     padding:60px;
-    line-height:2;
     font-size:22px;
-    color:#d8e6ef;
+    line-height:2;
+    color:#d6e3eb;
 }
 
 /* CONTACT */
@@ -304,18 +299,18 @@ nav a:hover{
     flex:1;
     min-width:260px;
     background:rgba(255,255,255,.04);
-    border-radius:26px;
-    padding:34px;
     border:1px solid rgba(255,255,255,.08);
+    border-radius:28px;
+    padding:34px;
 }
 
 .contact-card h3{
     margin-bottom:18px;
-    color:#27c4ff;
+    color:#29c7ff;
 }
 
 .contact-card p{
-    color:#d7e4ec;
+    color:#d6e3eb;
     line-height:1.8;
 }
 
@@ -324,7 +319,7 @@ nav a:hover{
 footer{
     text-align:center;
     padding:40px;
-    color:#8da6b7;
+    color:#8ca6b6;
     border-top:1px solid rgba(255,255,255,.08);
 }
 
@@ -349,7 +344,7 @@ footer{
 @media(max-width:768px){
 
 nav{
-    padding:20px 5%;
+    padding:18px 5%;
 }
 
 nav ul{
@@ -357,11 +352,11 @@ nav ul{
 }
 
 .hero{
-    padding:120px 5% 80px;
+    padding:130px 5% 80px;
 }
 
 .hero-text h2{
-    font-size:54px;
+    font-size:58px;
 }
 
 .hero-text p{
@@ -383,12 +378,12 @@ nav ul{
 
 <body>
 
-<!-- NAV -->
+<!-- NAVBAR -->
 
 <nav>
 
 <div class="logo">
-    <img src="images/logo.png">
+    <img src="images/logo.jpg">
     <h1>ATF<span>.STUDIO</span></h1>
 </div>
 
@@ -412,9 +407,10 @@ ATF<span>.STUDIO</span>
 </h2>
 
 <p>
-Creative Studio สำหรับโชว์ผลงาน 3D Model, Character Design,
-Fan Art, Branding และงาน Digital Art สไตล์โมเดิร์น
-ดูพรีเมียม และมีเอกลักษณ์
+Creative Studio สำหรับโชว์ผลงาน 3D Model,
+Character Design, Fan Art,
+Branding และงาน Digital Art
+สไตล์โมเดิร์น ดูพรีเมียม และมีเอกลักษณ์
 </p>
 
 <div class="hero-buttons">
@@ -437,9 +433,9 @@ Fan Art, Branding และงาน Digital Art สไตล์โมเดิ�
 
 <div class="slides">
 
-<img src="images/marshall1.jpg" class="slide active">
-<img src="images/rabbit1.jpg" class="slide">
-<img src="images/hollow1.jpg" class="slide">
+<img src="images/marshall-01.jpg" class="slide active">
+<img src="images/bunny-01.jpg" class="slide">
+<img src="images/hollow-01.jpg" class="slide">
 
 </div>
 
@@ -461,7 +457,7 @@ Featured <span>Projects</span>
 <div class="project-grid">
 
 <div class="project-card">
-<img src="images/marshall1.jpg">
+<img src="images/marshall-01.jpg">
 <div class="project-info">
 <h3>Marshall Headphone</h3>
 <p>
@@ -472,7 +468,7 @@ Featured <span>Projects</span>
 </div>
 
 <div class="project-card">
-<img src="images/rabbit1.jpg">
+<img src="images/bunny-01.jpg">
 <div class="project-info">
 <h3>Rabbit Character</h3>
 <p>
@@ -483,7 +479,7 @@ Character Design พร้อมจัดแสงและเรนเดอร
 </div>
 
 <div class="project-card">
-<img src="images/hollow1.jpg">
+<img src="images/hollow-01.jpg">
 <div class="project-info">
 <h3>Hollow Knight Fan Art</h3>
 <p>
@@ -510,12 +506,13 @@ About <span>Studio</span>
 ATF.STUDIO คือ Creative Portfolio Studio
 ที่เน้นงาน 3D Model, Character Design,
 Product Visualization และ Fan Art
-โดยเน้นงานภาพคุณภาพสูง สไตล์ cinematic
-modern และ premium
 
-เราใช้ Blender และ Digital Art Workflow
-ในการสร้างงานที่โดดเด่น เหมาะสำหรับ Portfolio,
-Branding และ Social Media Presentation
+โดยใช้ Blender และ Digital Art Workflow
+ในการสร้างงานคุณภาพสูง
+สไตล์ cinematic modern และ premium
+
+เหมาะสำหรับ Portfolio, Branding,
+Social Media และงาน Presentation
 
 </div>
 
@@ -556,8 +553,6 @@ Bangkok, Thailand
 
 </section>
 
-<!-- FOOTER -->
-
 <footer>
 © 2026 ATF.STUDIO — All Rights Reserved
 </footer>
@@ -571,26 +566,34 @@ const prev = document.querySelector(".prev");
 let index = 0;
 
 function showSlide(i){
-    slides.forEach(slide=>{
-        slide.classList.remove("active");
-    });
 
-    slides[i].classList.add("active");
+slides.forEach(slide=>{
+slide.classList.remove("active");
+});
+
+slides[i].classList.add("active");
+
 }
 
 next.addEventListener("click",()=>{
-    index = (index + 1) % slides.length;
-    showSlide(index);
+
+index = (index + 1) % slides.length;
+showSlide(index);
+
 });
 
 prev.addEventListener("click",()=>{
-    index = (index - 1 + slides.length) % slides.length;
-    showSlide(index);
+
+index = (index - 1 + slides.length) % slides.length;
+showSlide(index);
+
 });
 
 setInterval(()=>{
-    index = (index + 1) % slides.length;
-    showSlide(index);
+
+index = (index + 1) % slides.length;
+showSlide(index);
+
 },4000);
 
 </script>
