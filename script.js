@@ -39,7 +39,7 @@ function prevSlide(){
 if(slides.length){
   setInterval(() => {
     nextSlide();
-  }, 3500);
+  }, 5000);
 }
 
 /* LIGHTBOX */
