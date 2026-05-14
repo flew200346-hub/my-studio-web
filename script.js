@@ -1,1 +1,71 @@
-const slides=document.querySelectorAll(".slide");const next=document.querySelector(".next");const prev=document.querySelector(".prev");let index=0;function showSlide(i){slides.forEach(s=>s.classList.remove("active"));slides[i].classList.add("active")}if(next&&prev&&slides.length){next.addEventListener("click",()=>{index=(index+1)%slides.length;showSlide(index)});prev.addEventListener("click",()=>{index=(index-1+slides.length)%slides.length;showSlide(index)});setInterval(()=>{index=(index+1)%slides.length;showSlide(index)},4000)}const lightbox=document.querySelector(".lightbox");const lightboxImg=document.querySelector(".lightbox img");const closeBtn=document.querySelector(".lightbox button");document.querySelectorAll(".gallery-grid img,.project-card img,.slide").forEach(img=>{img.addEventListener("click",()=>{if(lightbox&&lightboxImg){lightboxImg.src=img.src;lightbox.classList.add("show")}})});if(closeBtn){closeBtn.addEventListener("click",()=>lightbox.classList.remove("show"))}if(lightbox){lightbox.addEventListener("click",e=>{if(e.target===lightbox){lightbox.classList.remove("show")}})}
+const slides = document.querySelectorAll(".slide");
+let currentSlide = 0;
+
+function showSlide(index){
+  if(!slides.length) return;
+
+  slides.forEach((slide) => {
+    slide.classList.remove("active");
+  });
+
+  slides[index].classList.add("active");
+}
+
+function nextSlide(){
+  if(!slides.length) return;
+
+  currentSlide++;
+
+  if(currentSlide >= slides.length){
+    currentSlide = 0;
+  }
+
+  showSlide(currentSlide);
+}
+
+function prevSlide(){
+  if(!slides.length) return;
+
+  currentSlide--;
+
+  if(currentSlide < 0){
+    currentSlide = slides.length - 1;
+  }
+
+  showSlide(currentSlide);
+}
+
+/* AUTO SLIDE */
+if(slides.length){
+  setInterval(() => {
+    nextSlide();
+  }, 3500);
+}
+
+/* LIGHTBOX */
+const lightbox = document.querySelector(".lightbox");
+const lightboxImg = document.querySelector(".lightbox img");
+const closeBtn = document.querySelector(".lightbox button");
+
+document.querySelectorAll(".gallery-grid img, .project-card img, .slide img").forEach((img) => {
+  img.addEventListener("click", () => {
+    if(lightbox && lightboxImg){
+      lightboxImg.src = img.src;
+      lightbox.classList.add("show");
+    }
+  });
+});
+
+if(closeBtn){
+  closeBtn.addEventListener("click", () => {
+    lightbox.classList.remove("show");
+  });
+}
+
+if(lightbox){
+  lightbox.addEventListener("click", (event) => {
+    if(event.target === lightbox){
+      lightbox.classList.remove("show");
+    }
+  });
+}

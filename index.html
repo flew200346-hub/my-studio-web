@@ -1,1 +1,105 @@
-<!DOCTYPE html><html lang="th"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Home | ATF.STUDIO</title><link rel="stylesheet" href="style.css"></head><body><header><a href="index.html" class="logo"><img src="images/logo.jpg" alt="AFT Studio Logo"><h1>ATF<span>.STUDIO</span></h1></a><nav><a href="index.html" class="active">Home</a><a href="projects.html" class="">Projects</a><a href="about.html" class="">About</a><a href="contact.html" class="">Contact</a></nav></header><main><section class="hero"><div class="hero-text"><h2>ATF<span>.STUDIO</span></h2><p>Creative Studio สำหรับโชว์ผลงาน 3D Model, Character Design, Fan Art, Branding และงาน Digital Art สไตล์โมเดิร์น ดูพรีเมียม และมีเอกลักษณ์</p><div class="hero-buttons"><a href="projects.html" class="btn btn-primary">ดูผลงาน</a><a href="contact.html" class="btn btn-outline">ติดต่อเรา</a></div></div><div class="hero-slider"><div class="slides"><img src="images/marshall-01.jpg" class="slide active" alt="Marshall"><img src="images/bunny-01.jpg" class="slide" alt="Bunny"><img src="images/hollow-01.jpg" class="slide" alt="Hollow Knight"></div><button class="prev">&#10094;</button><button class="next">&#10095;</button></div></section><section class="section"><h2 class="section-title">Featured <span>Projects</span></h2><div class="project-grid"><div class="project-card"><img src="images/marshall-01.jpg" alt="Marshall"><div class="project-info"><h3>Marshall Headphone</h3><p>3D Product Design และ Presentation Mockup สไตล์ cinematic สำหรับงานโชว์สินค้า</p></div></div><div class="project-card"><img src="images/bunny-01.jpg" alt="Bunny"><div class="project-info"><h3>Rabbit Character</h3><p>Character Design พร้อมจัดแสงและเรนเดอร์แนว street fashion</p></div></div><div class="project-card"><img src="images/hollow-01.jpg" alt="Hollow"><div class="project-info"><h3>Hollow Knight Fan Art</h3><p>Fan Art Model พร้อม cinematic lighting และ environment แบบเกมแฟนตาซี</p></div></div></div></section><div class="lightbox"><button>×</button><img src="" alt="preview"></div></main><footer>© 2026 ATF.STUDIO — All Rights Reserved</footer><script src="script.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | ATF.STUDIO</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">
+    <img src="images/logo.jpg" alt="AFT Studio Logo">
+    <h1>ATF<span>.STUDIO</span></h1>
+  </a>
+
+  <nav>
+    <a href="index.html" class="active">Home</a>
+<a href="projects.html" class="">Projects</a>
+<a href="about.html" class="">About</a>
+<a href="services.html" class="">Services</a>
+<a href="contact.html" class="">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-text">
+      <h2>ATF<span>.STUDIO</span></h2>
+
+      <p>
+        Creative Studio สำหรับโชว์ผลงาน 3D Model, Character Design, Fan Art,
+        Branding และงาน Digital Art สไตล์โมเดิร์น ดูพรีเมียม และมีเอกลักษณ์
+      </p>
+
+      <div class="hero-buttons">
+        <a href="projects.html" class="btn btn-primary">ดูผลงาน</a>
+        <a href="contact.html" class="btn btn-outline">ติดต่อเรา</a>
+      </div>
+    </div>
+
+    <div class="hero-slider">
+      <button class="slider-btn prev" onclick="prevSlide()">❮</button>
+
+      <div class="slider-track">
+        <div class="slide active">
+          <img src="images/cloud-01.jpg" alt="Cloud Character">
+        </div>
+
+        <div class="slide">
+          <img src="images/devil-01.jpg" alt="Devil Character">
+        </div>
+
+        <div class="slide">
+          <img src="images/grim-01.jpg" alt="Grim Character">
+        </div>
+      </div>
+
+      <button class="slider-btn next" onclick="nextSlide()">❯</button>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">Featured <span>Projects</span></h2>
+
+    <div class="project-grid">
+      <div class="project-card">
+        <img src="images/cloud-01.jpg" alt="Cloud Character">
+        <div class="project-info">
+          <h3>Cloud Character</h3>
+          <p>3D Character Design พร้อมสีและงานนำเสนอ Process</p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="images/devil-01.jpg" alt="Devil Character">
+        <div class="project-info">
+          <h3>Devil Character</h3>
+          <p>Dark Character Design โทนแดง ดำ พร้อมงาน Render Showcase</p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="images/grim-01.jpg" alt="Grim Character">
+        <div class="project-info">
+          <h3>Grim Character</h3>
+          <p>Street Style Character พร้อม Face Action และ Work Process</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="lightbox">
+    <button>×</button>
+    <img src="" alt="preview">
+  </div>
+</main>
+
+<footer>
+  © 2026 ATF.STUDIO — All Rights Reserved
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
