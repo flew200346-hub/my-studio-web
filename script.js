@@ -77,11 +77,11 @@ window.addEventListener("scroll", () => {
 
   const currentScroll = window.pageYOffset;
 
-  if (currentScroll > lastScroll && currentScroll > 80) {
+  if(currentScroll > lastScroll && currentScroll > 80){
 
     header.classList.add("hide-header");
 
-  } else {
+  }else{
 
     header.classList.remove("hide-header");
 
