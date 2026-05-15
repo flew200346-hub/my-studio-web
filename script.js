@@ -68,4 +68,26 @@ if(lightbox){
       lightbox.classList.remove("show");
     }
   });
+
+  let lastScroll = 0;
+
+const header = document.querySelector("header");
+
+window.addEventListener("scroll", () => {
+
+  const currentScroll = window.pageYOffset;
+
+  if (currentScroll > lastScroll && currentScroll > 80) {
+
+    header.classList.add("hide-header");
+
+  } else {
+
+    header.classList.remove("hide-header");
+
+  }
+
+  lastScroll = currentScroll;
+
+});
 }
