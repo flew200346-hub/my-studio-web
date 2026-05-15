@@ -16,26 +16,26 @@
 
   <nav>
     <a href="index.html" class="active">Home</a>
-<a href="projects.html" class="">Projects</a>
-<a href="about.html" class="">About</a>
-<a href="services.html" class="">Services</a>
-<a href="contact.html" class="">Contact</a>
+    <a href="projects.html" class="">Projects</a>
+    <a href="about.html" class="">About</a>
+    <a href="services.html" class="">Services</a>
+    <a href="contact.html" class="">Contact</a>
   </nav>
 </header>
 
 <main>
-  <section class="hero">
+  <section class="hero" id="home">
     <div class="hero-text">
+      <p class="eyebrow">Creative Portfolio Studio</p>
       <h2>AFT<span>.STUDIO</span></h2>
-
       <p>
-        Creative Studio สำหรับโชว์ผลงาน 3D Model, Character Design, Fan Art,
-        Branding และงาน Digital Art สไตล์โมเดิร์น ดูพรีเมียม และมีเอกลักษณ์
+        โชว์ผลงาน 3D Character, Product Visualization, Fan Art และ Digital Art
+        ในสไตล์โมเดิร์น โปร่ง สะอาด และดูเป็นมืออาชีพ
       </p>
 
       <div class="hero-buttons">
         <a href="projects.html" class="btn btn-primary">ดูผลงาน</a>
-        <a href="contact.html" class="btn btn-outline">ติดต่อเรา</a>
+        <a href="#showreel" class="btn btn-outline">ดูวิดีโอ</a>
       </div>
     </div>
 
@@ -43,44 +43,56 @@
       <button class="slider-btn prev" onclick="prevSlide()">❮</button>
 
       <div class="slider-track">
-        <div class="slide active">
-          <img src="images/slider-marshall.jpg" alt="Marshall 3D Model">
-        </div>
-
-        <div class="slide">
-          <img src="images/slider-tankun.jpg" alt="Tankun Character">
-        </div>
-
-        <div class="slide">
-          <img src="images/slider-bunny.jpg" alt="Bunny Character">
-        </div>
-
-        <div class="slide">
-          <img src="images/slider-devil.jpg" alt="Devil Character">
-        </div>
-
-        <div class="slide">
-          <img src="images/slider-grim.jpg" alt="Grim Character">
-        </div>
-
-        <div class="slide">
-          <img src="images/slider-hollow.jpg" alt="Hollow Knight Fan Art">
-        </div>
+        <div class="slide active"><img src="images/marshall-01.jpg" alt="Marshall Product"></div>
+        <div class="slide"><img src="images/tankun.jpg" alt="Tankun Character"></div>
+        <div class="slide"><img src="images/bunny-01.jpg" alt="Bunny Character"></div>
+        <div class="slide"><img src="images/devil-01.jpg" alt="Devil Character"></div>
+        <div class="slide"><img src="images/grim-02.jpg" alt="Grim Character"></div>
+        <div class="slide"><img src="images/hollow-04.jpg" alt="Hollow Knight Fan Art"></div>
       </div>
 
       <button class="slider-btn next" onclick="nextSlide()">❯</button>
     </div>
   </section>
 
+  <section class="section video-section" id="showreel">
+    <div class="section-head">
+      <p class="eyebrow">Showreel</p>
+      <h2 class="section-title">Video <span>Preview</span></h2>
+      <p class="section-desc">
+        พื้นที่สำหรับใส่วิดีโอผลงานหรือ work process หน้าแรก
+      </p>
+    </div>
+
+    <div class="video-card">
+      <video controls poster="images/marshall-01.jpg">
+        <source src="videos/showreel.mp4" type="video/mp4">
+        เบราว์เซอร์ของคุณไม่รองรับวิดีโอ
+      </video>
+
+      <div class="video-info">
+        <h3>Showreel / Work Process</h3>
+        <p>
+          เอาไฟล์วิดีโอ .mp4 ไปไว้ในโฟลเดอร์ <b>videos</b>
+          แล้วตั้งชื่อไฟล์ว่า <b>showreel.mp4</b>
+        </p>
+      </div>
+    </div>
+  </section>
+
   <section class="section">
-    <h2 class="section-title">Featured <span>Projects</span></h2>
+    <div class="section-head">
+      <p class="eyebrow">Featured Works</p>
+      <h2 class="section-title">Featured <span>Projects</span></h2>
+      <p class="section-desc">ตัวอย่างผลงานเด่น แยกทั้งงาน Character และ Product</p>
+    </div>
 
     <div class="project-grid">
       <div class="project-card">
-        <img src="images/cloud-01.jpg" alt="Cloud Character">
+        <img src="images/tankun.jpg" alt="Tankun Character">
         <div class="project-info">
-          <h3>Cloud Character</h3>
-          <p>3D Character Design พร้อมสีและงานนำเสนอ Process</p>
+          <h3>Tankun Character</h3>
+          <p>3D Character แนวน่ารัก พร้อมแสงและองค์ประกอบแบบอบอุ่น</p>
         </div>
       </div>
 
@@ -88,15 +100,15 @@
         <img src="images/devil-01.jpg" alt="Devil Character">
         <div class="project-info">
           <h3>Devil Character</h3>
-          <p>Dark Character Design โทนแดง ดำ พร้อมงาน Render Showcase</p>
+          <p>Dark Character Design โทนแดง-ดำ พร้อมงาน Render Showcase</p>
         </div>
       </div>
 
       <div class="project-card">
-        <img src="images/grim-01.jpg" alt="Grim Character">
+        <img src="images/marshall-01.jpg" alt="Marshall Product">
         <div class="project-info">
-          <h3>Grim Character</h3>
-          <p>Street Style Character พร้อม Face Action และ Work Process</p>
+          <h3>Marshall Headphone</h3>
+          <p>Product Visualization และ Presentation Mockup</p>
         </div>
       </div>
     </div>

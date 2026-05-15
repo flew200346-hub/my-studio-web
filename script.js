@@ -1,57 +1,113 @@
+/* =========================
+   HERO SLIDER
+========================= */
+
 const slides = document.querySelectorAll(".slide");
+
 let currentSlide = 0;
 
 function showSlide(index){
+
   if(!slides.length) return;
-  slides.forEach(slide => slide.classList.remove("active"));
+
+  slides.forEach((slide) => {
+    slide.classList.remove("active");
+  });
+
   slides[index].classList.add("active");
 }
 
 function nextSlide(){
+
   if(!slides.length) return;
-  currentSlide = (currentSlide + 1) % slides.length;
+
+  currentSlide++;
+
+  if(currentSlide >= slides.length){
+    currentSlide = 0;
+  }
+
   showSlide(currentSlide);
 }
 
 function prevSlide(){
+
   if(!slides.length) return;
-  currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+
+  currentSlide--;
+
+  if(currentSlide < 0){
+    currentSlide = slides.length - 1;
+  }
+
   showSlide(currentSlide);
 }
 
+/* AUTO SLIDE */
+
 if(slides.length){
-  setInterval(nextSlide, 5000);
+
+  setInterval(() => {
+    nextSlide();
+  }, 5000);
+
 }
 
-/* LIGHTBOX */
+/* =========================
+   LIGHTBOX
+========================= */
+
 const lightbox = document.querySelector(".lightbox");
+
 const lightboxImg = document.querySelector(".lightbox img");
+
 const closeBtn = document.querySelector(".lightbox button");
 
-document.querySelectorAll(".gallery-grid img, .project-card img, .slide img").forEach(img => {
-  img.addEventListener("click", () => {
-    if(lightbox && lightboxImg){
-      lightboxImg.src = img.src;
-      lightbox.classList.add("show");
-    }
-  });
+document
+  .querySelectorAll(".gallery-grid img, .project-card img, .slide img")
+  .forEach((img) => {
+
+    img.addEventListener("click", () => {
+
+      if(lightbox && lightboxImg){
+
+        lightboxImg.src = img.src;
+
+        lightbox.classList.add("show");
+
+      }
+
+    });
+
 });
 
 if(closeBtn){
+
   closeBtn.addEventListener("click", () => {
+
     lightbox.classList.remove("show");
+
   });
+
 }
 
 if(lightbox){
-  lightbox.addEventListener("click", event => {
+
+  lightbox.addEventListener("click", (event) => {
+
     if(event.target === lightbox){
+
       lightbox.classList.remove("show");
+
     }
+
   });
+
 }
 
-/* HIDE HEADER ON SCROLL */
+/* =========================
+   HIDE HEADER ON SCROLL
+========================= */
 
 let lastScroll = 0;
 
@@ -61,11 +117,11 @@ window.addEventListener("scroll", () => {
 
   const currentScroll = window.pageYOffset;
 
-  if(currentScroll > lastScroll && currentScroll > 80){
+  if(currentScroll > lastScroll && currentScroll > 20){
 
     header.classList.add("hide-header");
 
-  } else {
+  }else{
 
     header.classList.remove("hide-header");
 
