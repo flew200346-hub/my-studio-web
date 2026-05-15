@@ -3,43 +3,24 @@ let currentSlide = 0;
 
 function showSlide(index){
   if(!slides.length) return;
-
-  slides.forEach((slide) => {
-    slide.classList.remove("active");
-  });
-
+  slides.forEach(slide => slide.classList.remove("active"));
   slides[index].classList.add("active");
 }
 
 function nextSlide(){
   if(!slides.length) return;
-
-  currentSlide++;
-
-  if(currentSlide >= slides.length){
-    currentSlide = 0;
-  }
-
+  currentSlide = (currentSlide + 1) % slides.length;
   showSlide(currentSlide);
 }
 
 function prevSlide(){
   if(!slides.length) return;
-
-  currentSlide--;
-
-  if(currentSlide < 0){
-    currentSlide = slides.length - 1;
-  }
-
+  currentSlide = (currentSlide - 1 + slides.length) % slides.length;
   showSlide(currentSlide);
 }
 
-/* AUTO SLIDE */
 if(slides.length){
-  setInterval(() => {
-    nextSlide();
-  }, 5000);
+  setInterval(nextSlide, 5000);
 }
 
 /* LIGHTBOX */
@@ -47,7 +28,7 @@ const lightbox = document.querySelector(".lightbox");
 const lightboxImg = document.querySelector(".lightbox img");
 const closeBtn = document.querySelector(".lightbox button");
 
-document.querySelectorAll(".gallery-grid img, .project-card img, .slide img").forEach((img) => {
+document.querySelectorAll(".gallery-grid img, .project-card img, .slide img").forEach(img => {
   img.addEventListener("click", () => {
     if(lightbox && lightboxImg){
       lightboxImg.src = img.src;
@@ -63,13 +44,16 @@ if(closeBtn){
 }
 
 if(lightbox){
-  lightbox.addEventListener("click", (event) => {
+  lightbox.addEventListener("click", event => {
     if(event.target === lightbox){
       lightbox.classList.remove("show");
     }
   });
+}
 
-  let lastScroll = 0;
+/* HIDE HEADER ON SCROLL */
+
+let lastScroll = 0;
 
 const header = document.querySelector("header");
 
@@ -81,7 +65,7 @@ window.addEventListener("scroll", () => {
 
     header.classList.add("hide-header");
 
-  }else{
+  } else {
 
     header.classList.remove("hide-header");
 
@@ -90,4 +74,3 @@ window.addEventListener("scroll", () => {
   lastScroll = currentScroll;
 
 });
-}
