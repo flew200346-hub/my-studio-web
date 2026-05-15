@@ -34,7 +34,8 @@ header{
   z-index: 999;
 
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 
   padding: 18px 5%;
@@ -105,7 +106,7 @@ nav a.active{
 
   header{
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
 
     gap: 16px;
 
@@ -126,6 +127,7 @@ nav a.active{
 
     overflow-x: auto;
     white-space: nowrap;
+    justify-content: center;
 
     gap: 24px;
 
