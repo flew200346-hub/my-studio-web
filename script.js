@@ -64,7 +64,7 @@ const lightboxImg = document.querySelector(".lightbox img");
 const closeBtn = document.querySelector(".lightbox button");
 
 document
-  .querySelectorAll(".gallery-grid img, .project-card img, .slide img")
+  .querySelectorAll(".gallery-grid img, .project-gallery img, .project-card img, .slide img")
   .forEach((img) => {
 
     img.addEventListener("click", () => {
