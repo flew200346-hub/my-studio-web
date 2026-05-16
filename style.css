@@ -408,7 +408,7 @@ footer{
 
 .video-card video{
   width:100%;
-  max-width:380px; /* ปรับเล็กลง */
+  max-width:290px; /* ปรับเล็กลง */
   border-radius:28px;
 
   border:1px solid rgba(255,255,255,.12);
