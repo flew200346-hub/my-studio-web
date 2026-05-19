@@ -791,11 +791,11 @@ footer{
   display:grid !important;
 
   grid-template-columns:
-repeat(auto-fill,220px) !important;
-
-justify-content:center !important;
+  repeat(auto-fit,minmax(260px,1fr)) !important;
 
   gap:28px !important;
+
+  margin-bottom:80px !important;
 }
 
 /* CARD */
@@ -803,9 +803,9 @@ justify-content:center !important;
 .showcase-grid.character-grid .showcase-card{
   position:relative !important;
 
-  width:220px !important;
+  width:100% !important;
 
-  height:170px !important;
+  height:280px !important;
 
   border-radius:28px !important;
 
