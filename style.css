@@ -1004,7 +1004,8 @@ header{
 .product-grid{
   display:grid !important;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr)) !important;
-  gap:32px !important;
+  gap:55px !important;
+  margin-top:30px !important;
 }
 
 .product-grid .showcase-card{
@@ -1029,7 +1030,11 @@ header{
   line-height:1.2 !important;
 }
 @media(max-width:768px){
-    .product-grid .showcase-card{
-        height:320px;
-    }
+  .product-grid{
+    gap:40px !important;
+  }
+
+  .product-grid .showcase-card{
+    margin-bottom:10px !important;
+  }
 }
