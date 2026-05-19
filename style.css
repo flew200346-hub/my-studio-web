@@ -998,46 +998,6 @@ header{
   font-size:13px;
 }
 
-/* PRODUCT WORKS ให้เล็กเหมือน Character */
-.product-grid{
-  display:grid !important;
-  grid-template-columns:repeat(auto-fit, minmax(120px, 1fr)) !important;
-  gap:14px !important;
-  margin-top:25px !important;
-}
-
-.product-grid .showcase-card{
-  height:135px !important;
-  border-radius:14px !important;
-  overflow:hidden !important;
-}
-
-.product-grid .showcase-card img{
-  width:100% !important;
-  height:100% !important;
-  object-fit:cover !important;
-}
-
-.product-grid .showcase-content{
-  width:70% !important;
-  padding:12px 10px !important;
-  border-radius:14px !important;
-  bottom:12px !important;
-}
-
-.product-grid .showcase-content h3{
-  font-size:11px !important;
-}
-
-.product-grid .showcase-content p{
-  font-size:7px !important;
-}
-
-.product-grid .btn-small{
-  font-size:6px !important;
-  padding:4px 10px !important;
-}
-
 @media(max-width:768px){
 
   .product-grid{
