@@ -1000,25 +1000,33 @@ header{
 
 /* PRODUCT WORKS  */
 
+/* PRODUCT WORKS */
 .product-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:32px;
+  display:grid !important;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr)) !important;
+  gap:32px !important;
 }
 
 .product-grid .showcase-card{
-    height:330px;
+  width:100% !important;
+  height:330px !important;
+}
+
+.product-grid .showcase-card img{
+  width:100% !important;
+  height:100% !important;
+  object-fit:cover !important;
 }
 
 .product-grid .showcase-content{
-    width:78%;
-    padding:20px 18px;
-    bottom:26px;
+  width:78% !important;
+  padding:20px 18px !important;
+  bottom:26px !important;
 }
 
 .product-grid .showcase-content h3{
-    font-size:28px;
-    line-height:1.2;
+  font-size:28px !important;
+  line-height:1.2 !important;
 }
 @media(max-width:768px){
     .product-grid .showcase-card{
