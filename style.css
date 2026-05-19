@@ -104,13 +104,11 @@ nav a.active{
 /* HERO */
 
 .hero{
-  min-height:88vh;
-
+  min-height:auto;
   display:grid;
-  grid-template-columns:1fr 1fr;
+  grid-template-columns:1fr 420px;
   align-items:center;
-
-  padding:90px 7%;
+  padding:90px 12%;
   gap:70px;
 }
 
@@ -123,7 +121,7 @@ nav a.active{
 }
 
 .hero h2{
-  font-size:88px;
+  font-size:64px;
   line-height:1;
   margin-bottom:24px;
   font-weight:900;
@@ -175,18 +173,13 @@ nav a.active{
 
 .hero-slider{
   position:relative;
-
   width:100%;
-  max-width:540px;
+  max-width:420px;
   aspect-ratio:1/1;
-
   justify-self:center;
-
-  border-radius:32px;
+  border-radius:28px;
   overflow:hidden;
-
   background:rgba(255,255,255,.04);
-
   border:1px solid rgba(255,255,255,.12);
 }
 
@@ -456,4 +449,117 @@ footer{
 .project-gallery img:hover{
   transform:translateY(-8px);
   box-shadow:0 18px 40px rgba(0,0,0,.25);
+}
+
+/* SHOWCASE */
+
+.showcase-section{
+  padding:100px 7%;
+}
+
+.showcase-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:40px;
+}
+
+.showcase-card{
+  position:relative;
+  border-radius:42px;
+  overflow:hidden;
+
+  height:520px;
+
+  background:#111;
+
+  transition:.4s;
+}
+
+.showcase-card:hover{
+  transform:translateY(-12px);
+}
+
+.showcase-card img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* GLASS CARD */
+
+.showcase-content{
+  position:absolute;
+  left:50%;
+  bottom:24px;
+
+  transform:translateX(-50%);
+
+  width:82%;
+
+  padding:26px;
+
+  border-radius:30px;
+
+  background:rgba(255,255,255,.12);
+
+  backdrop-filter:blur(18px);
+
+  border:1px solid rgba(255,255,255,.18);
+
+  text-align:center;
+
+  box-shadow:0 10px 30px rgba(0,0,0,.25);
+}
+
+.showcase-content h3{
+  font-size:36px;
+  font-weight:900;
+  margin-bottom:8px;
+}
+
+.showcase-content p{
+  color:#e2e2e2;
+  margin-bottom:24px;
+}
+
+/* BUTTON */
+
+.showcase-btn{
+  display:inline-block;
+
+  padding:14px 34px;
+
+  border-radius:999px;
+
+  text-decoration:none;
+
+  color:white;
+  font-weight:700;
+
+  border:1px solid rgba(255,255,255,.4);
+
+  background:rgba(255,255,255,.10);
+
+  backdrop-filter:blur(10px);
+
+  transition:.3s;
+}
+
+.showcase-btn:hover{
+  background:white;
+  color:black;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+  .showcase-card{
+    height:440px;
+  }
+
+  .showcase-content h3{
+    font-size:28px;
+  }
+
 }
