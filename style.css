@@ -833,15 +833,15 @@ footer{
 
   left:50% !important;
 
-  bottom:22px !important;
+  bottom:16px !important;
 
   transform:translateX(-50%) !important;
 
-  width:78% !important;
+  width:72% !important;
 
-  padding:18px !important;
+  padding:14px 16px !important;
 
-  border-radius:22px !important;
+  border-radius:20px !important;
 
   background:rgba(255,255,255,.12) !important;
 
@@ -855,19 +855,25 @@ footer{
 /* TEXT */
 
 .showcase-grid.character-grid .showcase-content h3{
-  font-size:24px !important;
+  font-size:20px !important;
+
+  line-height:1.15 !important;
+
+  margin-bottom:6px !important;
 }
 
 .showcase-grid.character-grid .showcase-content p{
-  font-size:13px !important;
+  font-size:11px !important;
+
+  margin-bottom:10px !important;
 }
 
 /* BUTTON */
 
 .showcase-grid.character-grid .showcase-content button{
-  padding:10px 22px !important;
+  padding:8px 18px !important;
 
-  font-size:12px !important;
+  font-size:10px !important;
 
   border-radius:999px !important;
 }
