@@ -1007,7 +1007,7 @@ header{
 
 .product-grid .showcase-card{
     width:100%;
-    height:320px;
+    height:560px;
 }
 
 .product-grid .showcase-card img{
@@ -1019,4 +1019,9 @@ header{
 .product-grid .showcase-content{
     width:320px;
     padding:24px;
+}
+@media(max-width:768px){
+    .product-grid .showcase-card{
+        height:320px;
+    }
 }
