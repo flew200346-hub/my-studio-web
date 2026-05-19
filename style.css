@@ -998,67 +998,83 @@ header{
   font-size:13px;
 }
 
-/* PRODUCT WORKS  */
-
 /* PRODUCT WORKS */
-/* PRODUCT GRID FIX */
+
 .product-grid{
   display:grid !important;
-  grid-template-columns:repeat(auto-fit,minmax(320px,1fr)) !important;
+
+  /* ให้เหมือน Character */
+  grid-template-columns:repeat(auto-fill,minmax(260px,260px)) !important;
+
   gap:32px !important;
-  margin-top:40px !important;
+  justify-content:start !important;
+
+  margin-top:30px !important;
 }
 
 .product-grid .showcase-card{
   position:relative !important;
-  height:430px !important;
-  border-radius:42px !important;
+
+  width:260px !important;
+  height:330px !important;
+
+  border-radius:32px !important;
   overflow:hidden !important;
 }
 
 .product-grid .showcase-card img{
   width:100% !important;
   height:100% !important;
+
   object-fit:cover !important;
   display:block !important;
 }
 
 .product-grid .showcase-content{
   position:absolute !important;
+
   left:50% !important;
-  bottom:24px !important;
+  bottom:18px !important;
+
   transform:translateX(-50%) !important;
 
   width:78% !important;
-  padding:28px 22px !important;
+  padding:18px 16px !important;
 
-  border-radius:28px !important;
+  border-radius:24px !important;
 
   backdrop-filter:blur(18px) !important;
   background:rgba(255,255,255,0.12) !important;
-  border:1px solid rgba(255,255,255,0.2) !important;
+  border:1px solid rgba(255,255,255,0.18) !important;
 
   text-align:center !important;
 }
 
 .product-grid .showcase-content h3{
-  font-size:42px !important;
-  line-height:1.1 !important;
+  font-size:18px !important;
+  line-height:1.2 !important;
 }
 
 .product-grid .showcase-content p{
-  font-size:18px !important;
+  font-size:12px !important;
 }
 
 .product-grid .showcase-content button{
-  margin-top:18px !important;
+  margin-top:12px !important;
 }
+
 @media(max-width:768px){
+
   .product-grid{
-    gap:40px !important;
+    grid-template-columns:1fr !important;
+    justify-content:center !important;
   }
 
   .product-grid .showcase-card{
-    margin-bottom:10px !important;
+    width:100% !important;
+    max-width:320px !important;
+
+    margin:0 auto 20px auto !important;
   }
+
 }
