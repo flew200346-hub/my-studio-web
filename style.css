@@ -791,7 +791,9 @@ footer{
   display:grid !important;
 
   grid-template-columns:
-  repeat(auto-fit,minmax(220px,1fr)) !important;
+repeat(auto-fill,220px) !important;
+
+justify-content:center !important;
 
   gap:28px !important;
 }
@@ -801,9 +803,9 @@ footer{
 .showcase-grid.character-grid .showcase-card{
   position:relative !important;
 
-  width:100% !important;
+  width:220px !important;
 
-  height:320px !important;
+  height:170px !important;
 
   border-radius:28px !important;
 
