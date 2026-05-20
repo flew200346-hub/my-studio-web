@@ -24,63 +24,77 @@
 </header>
 
 <main>
-  <section class="hero" id="home">
-    <div class="hero-text">
-      <p class="eyebrow">Creative Portfolio Studio</p>
-      <h2>AFT<span>.STUDIO</span></h2>
-      
 
-      <div class="hero-buttons">
-        <a href="projects.html" class="btn btn-primary">ดูผลงาน</a>
-        <a href="#showreel" class="btn btn-outline">ดูวิดีโอ</a>
+  <!-- HERO -->
+  <section class="hero-home">
+
+    <div class="hero-bg">
+      <img src="images/Logo AFT-04.png" alt="">
+    </div>
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-center">
+      <img src="images/Logo AFT-06.png" class="hero-main-logo" alt="AFT">
+
+      <div class="hero-tags">
+        <span>• 3D MODEL CHARACTER</span>
+        <span>• 3D PRODUCT</span>
+        <span>• BOOTH DESIGN</span>
+        <span>• MASCOT DESIGN</span>
+        <span>• ART TOY DESIGNER</span>
       </div>
     </div>
 
-    <div class="hero-slider">
-      <button class="slider-btn prev" onclick="prevSlide()">❮</button>
-
-      <div class="slider-track">
-        <div class="slide active"><img src="images/marshall-01.jpg" alt="Marshall Product"></div>
-        <div class="slide"><img src="images/tankun.jpg" alt="Tankun Character"></div>
-        <div class="slide"><img src="images/bunny-01.jpg" alt="Bunny Character"></div>
-        <div class="slide"><img src="images/devil-01.jpg" alt="Devil Character"></div>
-        <div class="slide"><img src="images/grim-02.jpg" alt="Grim Character"></div>
-        <div class="slide"><img src="images/hollow-04.jpg" alt="Hollow Knight Fan Art"></div>
-      </div>
-
-      <button class="slider-btn next" onclick="nextSlide()">❯</button>
-    </div>
   </section>
 
+
+  <!-- WELCOME -->
+  <section class="welcome-section">
+
+    <img src="images/logo.jpg" class="welcome-logo" alt="logo">
+
+    <p class="welcome-mini">CREATIVE PORTFOLIO STUDIO</p>
+
+    <h2>WELCOME TO <span>OUR STUDIO!</span></h2>
+
+    <p class="welcome-desc">
+      AFT.STUDIO creates character design, product visualization,
+      booth design and creative 3D artwork with modern visual storytelling.
+    </p>
+
+  </section>
+
+
+  <!-- VIDEO -->
   <section class="section video-section" id="showreel">
+
     <div class="section-head">
       <p class="eyebrow">Showreel</p>
       <h2 class="section-title">Video <span>Preview</span></h2>
-      <p class="section-desc">
-      </p>
     </div>
 
     <div class="video-card">
       <video autoplay muted loop playsinline poster="images/marshall-01.jpg">
-  <source src="videos/showreel.mp4" type="video/mp4">
-</video>
-
-      <div class="video-info">
-
-      </div>
+        <source src="videos/showreel.mp4" type="video/mp4">
+      </video>
     </div>
+
   </section>
 
+
+  <!-- FEATURED -->
   <section class="section">
+
     <div class="section-head">
       <p class="eyebrow">Featured Works</p>
       <h2 class="section-title">Featured <span>Projects</span></h2>
-      <p class="section-desc">
     </div>
 
     <div class="project-grid">
+
       <div class="project-card">
-        <img src="images/tankun.jpg" alt="Tankun Character">
+        <img src="images/tankun.jpg">
         <div class="project-info">
           <h3>Tankun Character</h3>
           <p>3D Character แนวน่ารัก พร้อมแสงและองค์ประกอบแบบอบอุ่น</p>
@@ -88,7 +102,7 @@
       </div>
 
       <div class="project-card">
-        <img src="images/devil-01.jpg" alt="Devil Character">
+        <img src="images/devil-01.jpg">
         <div class="project-info">
           <h3>Devil Character</h3>
           <p>Dark Character Design โทนแดง-ดำ พร้อมงาน Render Showcase</p>
@@ -96,19 +110,24 @@
       </div>
 
       <div class="project-card">
-        <img src="images/marshall-01.jpg" alt="Marshall Product">
+        <img src="images/marshall-01.jpg">
         <div class="project-info">
           <h3>Marshall Headphone</h3>
           <p>Product Visualization และ Presentation Mockup</p>
         </div>
       </div>
+
     </div>
+
   </section>
 
+
+  <!-- LIGHTBOX -->
   <div class="lightbox">
     <button>×</button>
     <img src="" alt="preview">
   </div>
+
 </main>
 
 <footer>
