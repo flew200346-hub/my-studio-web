@@ -3,9 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Home | AFT.STUDIO</title>
-  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" href="style.css?v=3000">
 </head>
+
 <body>
 
 <header>
@@ -16,34 +19,30 @@
 
   <nav>
     <a href="index.html" class="active">Home</a>
-    <a href="projects.html" class="">Projects</a>
-    <a href="about.html" class="">About</a>
-    <a href="services.html" class="">Services</a>
-    <a href="contact.html" class="">Contact</a>
+    <a href="projects.html">Projects</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
   </nav>
 </header>
 
 <main>
 
   <!-- HERO -->
-  <section class="hero-home">
+  <section class="hero-home" id="home">
 
     <div class="hero-bg">
-      <img src="images/Logo AFT-04.png" alt="">
+      <img src="images/hero-bg.png" alt="AFT Studio Hero Background">
     </div>
 
     <div class="hero-overlay"></div>
 
-    <div class="hero-center">
-      <img src="images/Logo AFT-06.png" class="hero-main-logo" alt="AFT">
+    <div class="hero-minimal-text">
+      <p>CREATIVE 3D STUDIO</p>
+    </div>
 
-      <div class="hero-tags">
-        <span>• 3D MODEL CHARACTER</span>
-        <span>• 3D PRODUCT</span>
-        <span>• BOOTH DESIGN</span>
-        <span>• MASCOT DESIGN</span>
-        <span>• ART TOY DESIGNER</span>
-      </div>
+    <div class="scroll-indicator">
+      <span></span>
     </div>
 
   </section>
@@ -52,19 +51,59 @@
   <!-- WELCOME -->
   <section class="welcome-section">
 
-    <img src="images/logo.jpg" class="welcome-logo" alt="logo">
+    <div class="welcome-box">
 
-    <p class="welcome-mini">CREATIVE PORTFOLIO STUDIO</p>
+      <img src="images/welcome-logo.png" class="welcome-logo" alt="Welcome Logo">
 
-    <h2>WELCOME TO <span>OUR STUDIO!</span></h2>
+      
 
-    <p class="welcome-desc">
-      AFT.STUDIO creates character design, product visualization,
-      booth design and creative 3D artwork with modern visual storytelling.
-    </p>
+      <h2>
+        WELCOME TO <span>OUR STUDIO!</span>
+      </h2>
+
+      <p class="welcome-desc">
+        AFT.STUDIO creates character design, product visualization,
+        booth design and creative 3D artwork with modern visual storytelling.
+      </p>
+
+    </div>
 
   </section>
 
+  <!-- WORK SLIDER -->
+<section class="work-slider-section">
+
+  <p class="eyebrow">Selected Works</p>
+
+  <section class="work-slider-section">
+
+  <div class="work-slider">
+
+    <!-- SET 1 -->
+
+    <img src="images/marshall-01.jpg">
+    <img src="images/tankun.jpg">
+    <img src="images/bunny-01.jpg">
+    <img src="images/devil-01.jpg">
+    <img src="images/grim-02.jpg">
+    <img src="images/hollow-04.jpg">
+    <img src="images/cloud-01.jpg">
+    <img src="images/Mascot name Ruk Lok.jpg">
+
+    <!-- DUPLICATE FOR LOOP -->
+
+    <img src="images/marshall-01.jpg">
+    <img src="images/tankun.jpg">
+    <img src="images/bunny-01.jpg">
+    <img src="images/devil-01.jpg">
+    <img src="images/grim-02.jpg">
+    <img src="images/hollow-04.jpg">
+    <img src="images/cloud-01.jpg">
+    <img src="images/Mascot name Ruk Lok.jpg">
+
+  </div>
+
+</section>
 
   <!-- VIDEO -->
   <section class="section video-section" id="showreel">
@@ -84,7 +123,7 @@
 
 
   <!-- FEATURED -->
-  <section class="section">
+  <section class="section featured-section">
 
     <div class="section-head">
       <p class="eyebrow">Featured Works</p>
@@ -94,7 +133,7 @@
     <div class="project-grid">
 
       <div class="project-card">
-        <img src="images/tankun.jpg">
+        <img src="images/tankun.jpg" alt="Tankun Character">
         <div class="project-info">
           <h3>Tankun Character</h3>
           <p>3D Character แนวน่ารัก พร้อมแสงและองค์ประกอบแบบอบอุ่น</p>
@@ -102,7 +141,7 @@
       </div>
 
       <div class="project-card">
-        <img src="images/devil-01.jpg">
+        <img src="images/devil-01.jpg" alt="Devil Character">
         <div class="project-info">
           <h3>Devil Character</h3>
           <p>Dark Character Design โทนแดง-ดำ พร้อมงาน Render Showcase</p>
@@ -110,7 +149,7 @@
       </div>
 
       <div class="project-card">
-        <img src="images/marshall-01.jpg">
+        <img src="images/marshall-01.jpg" alt="Marshall Headphone">
         <div class="project-info">
           <h3>Marshall Headphone</h3>
           <p>Product Visualization และ Presentation Mockup</p>
@@ -134,6 +173,7 @@
   © 2026 AFT.STUDIO — All Rights Reserved
 </footer>
 
-<script src="script.js"></script>
+<script src="script.js?v=3000"></script>
+
 </body>
 </html>

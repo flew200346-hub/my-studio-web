@@ -3,14 +3,12 @@
 ========================= */
 
 const slides = document.querySelectorAll(".slide");
-
 let currentSlide = 0;
 
 function showSlide(index){
-
   if(!slides.length) return;
 
-  slides.forEach((slide) => {
+  slides.forEach(slide => {
     slide.classList.remove("active");
   });
 
@@ -18,7 +16,6 @@ function showSlide(index){
 }
 
 function nextSlide(){
-
   if(!slides.length) return;
 
   currentSlide++;
@@ -31,7 +28,6 @@ function nextSlide(){
 }
 
 function prevSlide(){
-
   if(!slides.length) return;
 
   currentSlide--;
@@ -43,95 +39,72 @@ function prevSlide(){
   showSlide(currentSlide);
 }
 
-/* AUTO SLIDE */
-
 if(slides.length){
-
-  setInterval(() => {
-    nextSlide();
-  }, 5000);
-
+  setInterval(nextSlide, 5000);
 }
+
 
 /* =========================
    LIGHTBOX
 ========================= */
 
 const lightbox = document.querySelector(".lightbox");
-
 const lightboxImg = document.querySelector(".lightbox img");
-
 const closeBtn = document.querySelector(".lightbox button");
 
 document
   .querySelectorAll(".gallery-grid img, .project-gallery img, .project-card img, .slide img")
-  .forEach((img) => {
+  .forEach(img => {
 
     img.addEventListener("click", () => {
 
       if(lightbox && lightboxImg){
-
         lightboxImg.src = img.src;
-
         lightbox.classList.add("show");
-
       }
 
     });
 
-});
-
-if(closeBtn){
-
-  closeBtn.addEventListener("click", () => {
-
-    lightbox.classList.remove("show");
-
   });
 
+if(closeBtn){
+  closeBtn.addEventListener("click", () => {
+    lightbox.classList.remove("show");
+  });
 }
 
 if(lightbox){
-
-  lightbox.addEventListener("click", (event) => {
-
+  lightbox.addEventListener("click", event => {
     if(event.target === lightbox){
-
       lightbox.classList.remove("show");
-
     }
-
   });
-
 }
 
-/* =========================
-   HIDE HEADER ON SCROLL
-========================= */
 
-let lastScroll = 0;
+/* =========================
+   HIDE HEADER
+   กลับมาเฉพาะตอนเลื่อนขึ้นสุด
+========================= */
 
 const header = document.querySelector("header");
 
 window.addEventListener("scroll", () => {
 
-  const currentScroll = window.pageYOffset;
+  const scrollY = window.scrollY;
 
-  if(currentScroll > lastScroll && currentScroll > 20){
-
-    header.classList.add("hide-header");
-
-  }else{
-
+  if(scrollY <= 30){
     header.classList.remove("hide-header");
-
+  }else{
+    header.classList.add("hide-header");
   }
-
-  lastScroll = currentScroll;
 
 });
 
-/* PROJECT GALLERY MODAL */
+
+/* =========================
+   PROJECT GALLERY MODAL
+========================= */
 
 const galleryModal = document.querySelector(".gallery-modal");
 const galleryImage = document.querySelector(".gallery-image");
@@ -154,6 +127,7 @@ function openGallery(images){
 
 function showGalleryImage(){
   if(!galleryImage || !galleryImages.length) return;
+
   galleryImage.src = galleryImages[galleryIndex];
 }
 
@@ -188,9 +162,36 @@ if(closeGallery){
 }
 
 if(galleryModal){
-  galleryModal.addEventListener("click", (event) => {
+  galleryModal.addEventListener("click", event => {
     if(event.target === galleryModal){
       galleryModal.classList.remove("show");
     }
   });
+}
+
+
+/* =========================
+   WELCOME SCROLL REVEAL
+========================= */
+
+const welcomeSection = document.querySelector(".welcome-section");
+
+if(welcomeSection){
+
+  const welcomeObserver = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+      if(entry.isIntersecting){
+        welcomeSection.classList.add("show");
+      }
+
+    });
+
+  }, {
+    threshold:0.25
+  });
+
+  welcomeObserver.observe(welcomeSection);
+
 }
