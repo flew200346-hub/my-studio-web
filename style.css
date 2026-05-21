@@ -1443,3 +1443,176 @@ transform:
 
   z-index:0;
 }
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media(max-width:900px){
+
+  header{
+    padding:16px 24px !important;
+  }
+
+  .logo h1{
+    font-size:34px !important;
+  }
+
+  nav{
+    gap:18px !important;
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  nav a{
+    font-size:15px !important;
+  }
+
+  /* HERO */
+
+  .hero-home{
+    min-height:88vh !important;
+  }
+
+  .hero-bg img{
+    object-fit:cover !important;
+    object-position:center !important;
+    transform:scale(1.08);
+  }
+
+  /* WELCOME */
+
+  .welcome-logo{
+    width:82vw !important;
+  }
+
+  /* PROJECT GRID */
+
+  .character-grid,
+  .showcase-grid.character-grid,
+  .project-grid{
+    grid-template-columns:1fr !important;
+    gap:100px !important;
+  }
+
+  .shape-card{
+    height:500px !important;
+    margin-bottom:40px !important;
+  }
+
+  .shape-card .showcase-character{
+    width:92% !important;
+    height:420px !important;
+  }
+
+  .shape-card .showcase-content{
+    width:68% !important;
+    bottom:-10px !important;
+  }
+
+  .shape-card .showcase-content h3{
+    font-size:24px !important;
+  }
+
+  .shape-card .showcase-content p{
+    font-size:14px !important;
+  }
+
+  /* VIDEO */
+
+  .video-card{
+    border-radius:24px !important;
+    overflow:hidden;
+  }
+
+  .video-card video{
+    height:240px !important;
+    object-fit:cover;
+  }
+
+}
+
+/* SMALL PHONE */
+
+@media(max-width:600px){
+
+  .logo img{
+    width:54px !important;
+    height:54px !important;
+  }
+
+  .logo h1{
+    font-size:28px !important;
+  }
+
+  nav{
+    gap:14px !important;
+  }
+
+  nav a{
+    font-size:14px !important;
+  }
+
+  .hero-home{
+    min-height:78vh !important;
+  }
+
+  .welcome-logo{
+    width:92vw !important;
+  }
+
+  .shape-card{
+    height:460px !important;
+  }
+
+  .shape-card .showcase-character{
+    height:390px !important;
+  }
+
+  .shape-card .showcase-content{
+    width:74% !important;
+    padding:18px 16px !important;
+  }
+
+  .shape-card .showcase-content h3{
+    font-size:20px !important;
+  }
+
+  .section-title{
+    font-size:42px !important;
+  }
+
+}
+@media(max-width:600px){
+
+  header{
+    top:12px !important;
+    width:92% !important;
+    min-width:unset !important;
+    padding:14px 16px !important;
+    flex-direction:column !important;
+    gap:12px !important;
+  }
+
+  .logo img{
+    width:46px !important;
+    height:46px !important;
+  }
+
+  .logo h1{
+    font-size:28px !important;
+  }
+
+  nav{
+    width:100% !important;
+    display:flex !important;
+    flex-direction:row !important;
+    justify-content:center !important;
+    flex-wrap:wrap !important;
+    gap:10px 16px !important;
+  }
+
+  nav a{
+    font-size:13px !important;
+  }
+
+}
