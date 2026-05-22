@@ -15,7 +15,7 @@ html{
 }
 
 body{
-  background:#070019;
+  background:transparent;
   color:white;
   overflow-x:hidden;
   font-size:16px;
@@ -150,7 +150,7 @@ nav a.active::after{
   position:relative;
   min-height:calc(100vh - 120px);
   overflow:hidden;
-  background:#070019;
+  background:transparent;
 
   display:flex;
   align-items:center;
@@ -269,7 +269,7 @@ nav a.active::after{
   position:relative;
   min-height:70vh;
 
-  background:#070019;
+  background:transparent;
   margin-top:-1px;
 
   display:flex;
@@ -311,6 +311,8 @@ nav a.active::after{
 .welcome-desc{
   display:none;
 }
+
+
 /* NORMAL HERO / OLD HOME */
 
 .hero{
@@ -1100,13 +1102,13 @@ footer{
 
 .hero-home::after{
 
-  height:120px !important;
+  height:300px !important;
 
   background:
     linear-gradient(
       to bottom,
       rgba(7,0,25,0),
-      rgba(7,0,25,.35) 65%,
+      rgba(7,0,25,.65) 65%,
       #070019 100%
     ) !important;
 
@@ -1162,9 +1164,9 @@ footer{
   position:relative;
   overflow:hidden;
 
-  background:#070019;
+  background:transparent;
 
-  padding:30px 0 120px;
+  padding:60px 0 100px;
 
   margin-top:-40px;
 }
@@ -1178,6 +1180,7 @@ footer{
   height:100%;
   z-index:5;
   pointer-events:none;
+  display:none !important;
 }
 
 .work-slider-section::before{
@@ -1635,4 +1638,552 @@ transform:
     display:block;
   }
 
+}
+@media(max-width:600px){
+
+  .hero-bg img{
+    width:100% !important;
+    height:100% !important;
+
+    object-fit:contain !important;
+    object-position:center center !important;
+
+    background:transparent;
+
+    transform:none !important;
+  }
+
+}
+/* =========================
+   HERO CINEMATIC EFFECT
+========================= */
+
+.hero-home{
+  position:relative;
+  overflow:hidden;
+}
+
+/* แสงเรืองหลัง */
+
+.hero-home::before{
+  content:"";
+
+  position:absolute;
+  inset:-20%;
+
+  background:
+    radial-gradient(circle at 50% 35%,
+      rgba(255,0,255,.28),
+      transparent 35%),
+
+    radial-gradient(circle at 20% 50%,
+      rgba(0,180,255,.18),
+      transparent 30%),
+
+    radial-gradient(circle at 80% 40%,
+      rgba(255,255,255,.10),
+      transparent 25%);
+
+  filter:blur(60px);
+
+  animation:heroGlow 8s ease-in-out infinite alternate;
+
+  z-index:1;
+}
+
+/* แสงวิ่ง */
+
+.hero-home::after{
+  content:"";
+
+  position:absolute;
+
+  top:-20%;
+  left:-30%;
+
+  width:45%;
+  height:160%;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255,255,255,.12),
+      transparent
+    );
+
+  transform:rotate(12deg);
+
+  filter:blur(22px);
+
+  animation:lightSweep 7s linear infinite;
+
+  z-index:2;
+}
+
+/* รูป */
+
+.hero-bg{
+  position:relative;
+  z-index:3;
+}
+
+.hero-bg img{
+
+  animation:
+    heroFloat 6s ease-in-out infinite;
+
+  filter:
+    saturate(1.1)
+    contrast(1.06)
+    brightness(1.02);
+
+}
+
+/* เอฟเฟคลอย */
+
+@keyframes heroFloat{
+
+  0%{
+    transform:scale(1) translateY(0px);
+  }
+
+  50%{
+    transform:scale(1.02) translateY(-10px);
+  }
+
+  100%{
+    transform:scale(1) translateY(0px);
+  }
+
+}
+
+/* glow */
+
+@keyframes heroGlow{
+
+  0%{
+    transform:scale(1);
+    opacity:.8;
+  }
+
+  100%{
+    transform:scale(1.1);
+    opacity:1;
+  }
+
+}
+
+/* แสงวิ่ง */
+
+@keyframes lightSweep{
+
+  0%{
+    transform:
+      translateX(-120%)
+      rotate(12deg);
+  }
+
+  100%{
+    transform:
+      translateX(320%)
+      rotate(12deg);
+  }
+
+}
+/* =========================
+   LIGHT SWEEP EFFECT
+========================= */
+
+.hero-home{
+  position:relative;
+  overflow:hidden;
+}
+
+.hero-light{
+
+  position:absolute;
+
+  top:-20%;
+  left:-35%;
+
+  width:40%;
+  height:180%;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255,255,255,.10),
+      rgba(255,255,255,.18),
+      rgba(255,255,255,.10),
+      transparent
+    );
+
+  filter:blur(35px);
+
+  transform:rotate(12deg);
+
+  z-index:4;
+
+  pointer-events:none;
+
+  animation:lightMove 8s linear infinite;
+}
+
+@keyframes lightMove{
+
+  0%{
+    transform:
+      translateX(-120%)
+      rotate(12deg);
+  }
+
+  100%{
+    transform:
+      translateX(420%)
+      rotate(12deg);
+  }
+
+}
+/* =========================
+   CLEAN COLOR BLEND
+========================= */
+
+.welcome-section{
+
+  position:relative;
+
+  margin-top:-120px !important;
+
+  padding-top:180px !important;
+
+  background:
+    linear-gradient(
+      to bottom,
+
+      rgba(25,0,70,.15) 0%,
+      rgba(20,0,55,.55) 25%,
+      rgba(10,0,35,.92) 60%,
+      #070019 100%
+    ) !important;
+
+}.hero-home{
+  position:relative;
+}
+
+.hero-home::after{
+  content:"";
+
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+
+  height:220px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(7,0,25,0),
+      rgba(7,0,25,.78),
+      #070019
+    );
+
+  z-index:5;
+}
+/* =========================
+   GLOBAL SPACE BACKGROUND
+========================= */
+
+body{
+
+  background:
+    radial-gradient(circle at top,
+      #170038 0%,
+      #090018 45%,
+      #050010 100%);
+
+  color:white;
+
+  overflow-x:hidden;
+
+  position:relative;
+}
+
+/* ดาว */
+
+body::before{
+
+  content:"";
+
+  position:fixed;
+  inset:0;
+
+  background-image:
+    radial-gradient(rgba(255,255,255,.9) 1px, transparent 1px),
+    radial-gradient(rgba(120,180,255,.6) 1px, transparent 1px),
+    radial-gradient(rgba(255,0,255,.45) 1px, transparent 1px);
+
+  background-size:
+    140px 140px,
+    220px 220px,
+    320px 320px;
+
+  background-position:
+    0 0,
+    40px 60px,
+    100px 120px;
+
+  opacity:.12;
+
+  pointer-events:none;
+
+  z-index:-2;
+
+  animation:starsMove 90s linear infinite;
+}
+
+/* glow ม่วง */
+
+body::after{
+
+  content:"";
+
+  position:fixed;
+
+  width:900px;
+  height:900px;
+
+  top:-250px;
+  left:50%;
+
+  transform:translateX(-50%);
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(120,0,255,.18),
+      transparent 70%
+    );
+
+  filter:blur(90px);
+
+  pointer-events:none;
+
+  z-index:-1;
+}
+
+/* animation */
+
+@keyframes starsMove{
+
+  from{
+    transform:translateY(0);
+  }
+
+  to{
+    transform:translateY(-300px);
+  }
+
+}/* =========================
+   MOBILE FIX
+========================= */
+
+@media(max-width:768px){
+
+  /* HEADER */
+
+  header{
+
+    width:92% !important;
+
+    top:18px !important;
+
+    padding:18px 20px !important;
+
+    border-radius:28px !important;
+  }
+
+  .logo h1{
+    font-size:34px !important;
+  }
+
+  nav{
+    gap:18px !important;
+    flex-wrap:wrap;
+  }
+
+  nav a{
+    font-size:15px !important;
+  }
+
+  /* HERO */
+
+  .hero-home{
+
+    min-height:72vh !important;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    padding-top:120px !important;
+  }
+
+  .hero-bg{
+
+    width:100% !important;
+    height:100% !important;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+
+  .hero-bg img{
+
+    width:115% !important;
+    height:auto !important;
+
+    object-fit:contain !important;
+
+    transform:none !important;
+
+    opacity:.95;
+  }
+
+  /* TAGS */
+
+  .hero-tags{
+
+    bottom:36px !important;
+
+    gap:8px !important;
+
+    padding:0 12px !important;
+
+    flex-wrap:wrap;
+  }
+
+  .hero-tags span{
+
+    font-size:10px !important;
+
+    padding:7px 12px !important;
+  }
+
+  /* WELCOME */
+
+  .welcome-section{
+
+    min-height:auto !important;
+
+    padding:100px 20px !important;
+
+    margin-top:-40px !important;
+  }
+
+  .welcome-logo{
+
+    width:240px !important;
+  }
+
+}/* ให้ดาวเห็นทุก section */
+.section,
+.video-section,
+.featured-section,
+.showcase-section,
+.work-slider-section,
+.welcome-section{
+  background:transparent !important;
+}
+
+/* ถ้าพื้นยังมืดทึบ ให้ body เป็นดาว */
+body{
+  background:
+    radial-gradient(circle at top,#170038 0%,#090018 45%,#050010 100%) !important;
+}
+/* =========================
+   ONE BLOCK LAYOUT
+========================= */
+
+main{
+
+  background:
+    radial-gradient(circle at top,
+      #1b0040 0%,
+      #0c0020 35%,
+      #050010 100%);
+
+  position:relative;
+
+  overflow:hidden;
+}
+
+/* ดาว */
+
+main::before{
+
+  content:"";
+
+  position:absolute;
+  inset:0;
+
+  background-image:
+    radial-gradient(rgba(255,255,255,.9) 1px, transparent 1px);
+
+  background-size:120px 120px;
+
+  opacity:.08;
+
+  pointer-events:none;
+
+  animation:starsMove 90s linear infinite;
+
+  z-index:0;
+}
+
+@keyframes starsMove{
+
+  from{
+    transform:translateY(0);
+  }
+
+  to{
+    transform:translateY(-300px);
+  }
+
+}
+
+/* ทุก section โปร่ง */
+
+.hero-home,
+.welcome-section,
+.work-slider-section,
+.section,
+.featured-section{
+
+  background:transparent !important;
+
+  position:relative;
+  z-index:2;
+}
+
+/* welcome ไม่ต้องมีพื้นหลังแล้ว */
+
+.welcome-section{
+
+  margin-top:-60px;
+
+  padding-top:80px;
+}
+
+/* works ต่อจาก welcome เลย */
+
+.work-slider-section{
+
+  margin-top:-40px;
+
+  padding-top:40px;
 }
