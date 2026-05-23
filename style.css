@@ -1052,7 +1052,7 @@ footer{
   }
 
   .welcome-logo{
-    width:360px;
+    width:820px;
   }
 
   .video-card video{
@@ -1485,7 +1485,7 @@ transform:
   /* WELCOME */
 
   .welcome-logo{
-    width:82vw !important;
+    width:95vw !important;
   }
 
   /* PROJECT GRID */
@@ -1791,61 +1791,7 @@ transform:
   }
 
 }
-/* =========================
-   LIGHT SWEEP EFFECT
-========================= */
 
-.hero-home{
-  position:relative;
-  overflow:hidden;
-}
-
-.hero-light{
-
-  position:absolute;
-
-  top:-20%;
-  left:-35%;
-
-  width:40%;
-  height:180%;
-
-  background:
-    linear-gradient(
-      90deg,
-      transparent,
-      rgba(255,255,255,.10),
-      rgba(255,255,255,.18),
-      rgba(255,255,255,.10),
-      transparent
-    );
-
-  filter:blur(35px);
-
-  transform:rotate(12deg);
-
-  z-index:4;
-
-  pointer-events:none;
-
-  animation:lightMove 8s linear infinite;
-}
-
-@keyframes lightMove{
-
-  0%{
-    transform:
-      translateX(-120%)
-      rotate(12deg);
-  }
-
-  100%{
-    transform:
-      translateX(420%)
-      rotate(12deg);
-  }
-
-}
 /* =========================
    CLEAN COLOR BLEND
 ========================= */
@@ -2086,7 +2032,7 @@ body::after{
 
   .welcome-logo{
 
-    width:240px !important;
+    width:300px !important;
   }
 
 }/* ให้ดาวเห็นทุก section */
@@ -2186,4 +2132,177 @@ main::before{
   margin-top:-40px;
 
   padding-top:40px;
+}
+/* FIX HERO IMAGE BLEND */
+
+.hero-home{
+  background:#050010 !important;
+}
+
+.hero-bg{
+  inset:0 !important;
+  overflow:hidden !important;
+}
+
+.hero-bg img{
+  width:100% !important;
+  height:100% !important;
+
+  object-fit:cover !important;
+  object-position:center top !important;
+
+  mask-image:linear-gradient(
+    to bottom,
+    rgba(0,0,0,1) 0%,
+    rgba(0,0,0,1) 68%,
+    rgba(0,0,0,.55) 82%,
+    rgba(0,0,0,0) 100%
+  );
+
+  -webkit-mask-image:linear-gradient(
+    to bottom,
+    rgba(0,0,0,1) 0%,
+    rgba(0,0,0,1) 68%,
+    rgba(0,0,0,.55) 82%,
+    rgba(0,0,0,0) 100%
+  );
+}
+
+.hero-overlay{
+  background:linear-gradient(
+    to bottom,
+    rgba(5,0,16,0) 0%,
+    rgba(5,0,16,.18) 55%,
+    #050010 100%
+  ) !important;
+}
+.hero-home::after{
+  display:none !important;
+}
+/* SAME BACKGROUND COLOR FIX */
+
+body,
+main,
+.hero-home,
+.welcome-section,
+.work-slider-section,
+.section,
+.video-section,
+.featured-section{
+  background:#14002d !important;
+}
+
+/* ไล่สีนิดเดียวให้ไม่แบน */
+main{
+  background:
+    linear-gradient(
+      to bottom,
+      #120028 0%,
+      #14002d 45%,
+      #120028 100%
+    ) !important;
+}
+
+/* เอาเส้นตัด/เงาตัดออก */
+.hero-overlay,
+.hero-home::after{
+  display:none !important;
+}
+
+/* ให้รูป hero ลอยบนพื้นสีเดียว */
+.hero-bg img{
+  object-fit:contain !important;
+  background:#14002d !important;
+}
+/* HERO SMOOTH FADE */
+
+.hero-home{
+  position:relative;
+  overflow:hidden;
+}
+
+.hero-home::after{
+
+  content:"";
+
+  position:absolute;
+
+  left:0;
+  bottom:-1px;
+
+  width:100%;
+  height:260px;
+
+  z-index:5;
+
+  pointer-events:none;
+
+  background:linear-gradient(
+    to bottom,
+    rgba(20,0,45,0) 0%,
+    rgba(20,0,45,.15) 20%,
+    rgba(20,0,45,.45) 45%,
+    rgba(20,0,45,.78) 70%,
+    #14002d 100%
+  );
+}
+/* WELCOME SMOOTH FADE */
+
+.welcome-section{
+  position:relative;
+  overflow:hidden;
+}
+
+.welcome-section::after{
+
+  content:"";
+
+  position:absolute;
+
+  left:0;
+  bottom:-1px;
+
+  width:100%;
+  height:240px;
+
+  pointer-events:none;
+
+  z-index:3;
+
+  background:linear-gradient(
+    to bottom,
+    rgba(20,0,45,0) 0%,
+    rgba(20,0,45,.12) 22%,
+    rgba(20,0,45,.35) 48%,
+    rgba(20,0,45,.72) 74%,
+    #14002d 100%
+  );
+}
+.welcome-box::before{
+
+  content:"";
+
+  position:absolute;
+
+  left:50%;
+  top:50%;
+
+  transform:translate(-50%,-50%);
+
+  width:540px;
+  height:540px;
+
+  border-radius:50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(170,70,255,.22),
+      rgba(70,120,255,.10),
+      transparent 72%
+    );
+
+  filter:blur(40px);
+
+  z-index:-1;
 }
