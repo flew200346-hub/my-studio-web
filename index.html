@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   <title>Home | AFT.STUDIO</title>
 
   <link rel="stylesheet" href="style.css?v=3000">
@@ -70,7 +70,19 @@
     </div>
 
   </section>
+<section class="grim-showcase">
 
+  <h2>GRIM CHARACTER</h2>
+
+  <model-viewer
+      src="models/Grim.glb"
+      camera-controls
+      auto-rotate
+      shadow-intensity="1"
+      exposure="1">
+  </model-viewer>
+
+</section>
   <!-- WORK SLIDER -->
 <section class="work-slider-section">
 
